@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Tagarampudi | Pharmaceutical Research Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0b3c5d;
+  --accent:#00b4d8;
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --text:#1e293b;
+  --muted:#64748b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+}
+
+/* ===== NAV ===== */
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  padding:18px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #e2e8f0;
+}
+
+nav h2{
+  color:var(--primary);
+  font-weight:700;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:26px;
+}
+
+nav a{
+  color:var(--text);
+  font-weight:500;
+}
+
+/* ===== HERO ===== */
+header{
+  background:linear-gradient(135deg,#0b3c5d,#102a43,#1e3a5f);
+  color:white;
+}
+
+.hero{
+  padding:120px 10% 130px;
+  max-width:1000px;
+}
+
+.hero h1{
+  font-size:3.3rem;
+  font-weight:700;
+}
+
+.hero h3{
+  margin:14px 0;
+  font-weight:400;
+  opacity:0.9;
+}
+
+.hero p{
+  max-width:800px;
+  margin-top:22px;
+  opacity:0.95;
+}
+
+.badges{
+  margin-top:25px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.badge{
+  background:rgba(255,255,255,0.15);
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:0.85rem;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  padding:14px 38px;
+  background:var(--accent);
+  color:#000;
+  font-weight:600;
+  border-radius:40px;
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  padding:95px 10%;
+}
+
+.section h2{
+  font-size:2.4rem;
+  color:var(--primary);
+  margin-bottom:45px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:var(--card);
+  padding:32px;
+  border-radius:18px;
+  margin-bottom:35px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== EXPERIENCE TIMELINE ===== */
+.timeline{
+  position:relative;
+  padding-left:35px;
+}
+
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:10px;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(var(--accent),var(--primary));
+}
+
+.timeline .card{
+  position:relative;
+}
+
+.timeline .card::before{
+  content:'';
+  position:absolute;
+  left:-42px;
+  top:35px;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--accent);
+}
+
+/* ===== SKILLS ===== */
+.skill{
+  margin-bottom:26px;
+}
+
+.skill span{
+  font-weight:600;
+}
+
+.bar{
+  margin-top:10px;
+  background:#e5e7eb;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar div{
+  height:10px;
+  width:0;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transition:width 1.3s ease;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#0b3c5d;
+  color:white;
+  text-align:center;
+  padding:35px;
+}
+
+@media(max-width:768px){
+  nav ul{display:none;}
+  .hero h1{font-size:2.5rem;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <h2>Samuel</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Samuel Tagarampudi</h1>
+  <h3>Quality Control Chemist & R&D Associate</h3>
+  <p>
+    Research-oriented pharmacy graduate currently working at VIDA Solutions India,
+    with hands-on experience in chemical stability evaluation and formulation
+    optimization of hypochlorous acid (HOCl) systems. Strong wet-lab expertise
+    complemented by structured data collection, experimental documentation,
+    data interpretation, and programming fundamentals relevant to biomedical informatics.
+  </p>
+
+  <div class="badges">
+    <div class="badge">HOCl Chemistry</div>
+    <div class="badge">Pharmaceutical QC</div>
+    <div class="badge">Formulation Stability</div>
+    <div class="badge">Wet-Lab Research</div>
+    <div class="badge">Public Health</div>
+  </div>
+
+  <a href="#contact" class="btn">Contact Me</a>
+</section>
+</header>
+
+<section id="about" class="section">
+<h2>Education & Academic Foundation</h2>
+<div class="card">
+  <p><strong>Bachelor of Pharmaceutical Sciences (B.Pharmacy)</strong></p>
+  <p>Andhra University, Visakhapatnam — <strong>GPA: 8.02</strong> (April 2022)</p>
+  <br>
+  <p><strong>Relevant Coursework:</strong></p>
+  <p>
+    Pharmaceutical Analysis, Biochemistry, Biostatistics & Research Methodology,
+    Computer Applications in Pharmacy
+  </p>
+</div>
+</section>
+
+<section id="experience" class="section">
+<h2>Professional Experience</h2>
+
+<div class="timeline">
+
+  <div class="card">
+    <h3>Quality Control Chemist & R&D Associate</h3>
+    <p class="muted">VIDA Solutions India | Oct 2025 – Present</p>
+    <p>
+      VIDA Solutions India manufactures hypochlorous acid-based disinfectants and
+      operates as a social enterprise of New Life International (USA), supporting
+      global public health initiatives.
+    </p>
+    <ul>
+      <li>Conducted QC testing on 10+ HOCl batches weekly with 100% batch release approval.</li>
+      <li>Maintained zero out-of-specification (OOS) results.</li>
+      <li>Performed 15–20 R&D experiments per month focused on formulation stability.</li>
+      <li>Designed and executed pH adjustment of HOCl from 2.28 to 5.0 using KOH.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Community Pharmacist</h3>
+    <p class="muted">Health City Pharmacy | Apr 2025 – Sep 2025</p>
+    <ul>
+      <li>Dispensed prescription and OTC medications with full regulatory compliance.</li>
+      <li>Provided patient counseling on dosing, side effects, and storage.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Hospital Pharmacist</h3>
+    <p class="muted">Wellness Hospitals | Feb 2022 – Feb 2025</p>
+    <ul>
+      <li>Processed 200+ prescriptions weekly with accurate dose verification.</li>
+      <li>Collaborated with physicians and nursing staff for safe therapy.</li>
+      <li>Managed drug inventory, cold-chain storage, and regulatory records.</li>
+    </ul>
+  </div>
+
+</div>
+</section>
+
+<section id="research" class="section">
+<h2>Academic Research Projects</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Setaria italica: Anti-Hyperglycemic Screening</h3>
+    <p>
+      Conducted qualitative and quantitative phytochemical analysis to identify
+      flavonoid content and evaluated anti-hyperglycemic activity using standard
+      biochemical assays. Findings support potential functional food applications
+      for diabetes management.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Medicinal Plant Bioactivity Evaluation</h3>
+    <p>
+      Performed solvent extraction and phytochemical screening of
+      <em>Limonia acidissima</em> and <em>Eclipta alba</em>.
+      Assessed antioxidant and anti-inflammatory properties through in-vitro assays
+      and documented pharmacological potential.
+    </p>
+  </div>
+
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2>Technical & Professional Skills</h2>
+
+<div class="card">
+
+  <div class="skill">
+    <span>Pharmaceutical Formulation & Stability Studies</span>
+    <div class="bar"><div data-level="90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>HOCl Chemistry & pH Optimization</span>
+    <div class="bar"><div data-level="88%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Analytical & Wet-Lab Techniques (TLC, Bioassays)</span>
+    <div class="bar"><div data-level="85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Programming (C, Python, SQL, DBMS)</span>
+    <div class="bar"><div data-level="65%"></div></div>
+  </div>
+
+</div>
+</section>
+
+<section id="credentials" class="section">
+<h2>Publications, Certifications & Achievements</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Publication (In Preparation)</h3>
+    <p>
+      Manuscript on a mobile-based emergency medical transport platform enabling
+      rapid deployment of trained personnel using geolocation-enabled coordination
+      to improve emergency response efficiency.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Certifications & Licensure</h3>
+    <ul>
+      <li>Good Clinical Practices (GCP) — NIDA (April 2023)</li>
+      <li>Registered Pharmacist — Andhra Pradesh Pharmacy Council (2023)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Achievements</h3>
+    <ul>
+      <li>Member, Sakura Science Club (JST, Japan) — Agency ID: 21400214</li>
+      <li>Qualified GPAT with <strong>AIR-1155</strong></li>
+    </ul>
+  </div>
+
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<div class="card">
+  <p><strong>Email:</strong> tagarampudisamuel@gmail.com</p>
+  <p><strong>Phone:</strong> +91 7337477513</p>
+  <p><strong>Location:</strong> Visakhapatnam, Andhra Pradesh, India</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Samuel Tagarampudi — Pharmaceutical Research Portfolio</p>
+</footer>
+
+<script>
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      entry.target.querySelectorAll('.bar div')
+        .forEach(bar=>bar.style.width=bar.dataset.level);
+    }
+  });
+},{threshold:0.2});
+
+cards.forEach(card=>observer.observe(card));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.onclick=e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  };
+});
+</script>
+
+</body>
+</html>
